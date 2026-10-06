@@ -1,0 +1,16 @@
+{
+  "time": 1791201919.283483,
+  "reason": "Increased execution parallelism following memory release; a previous repeated uniform solve exceeded the 13 GiB RSS guard.",
+  "scientific_protocol_changed": false,
+  "completed_budget_records_preserved": 10,
+  "execution": "one budget per subprocess, at most four workers; exact original observations and estimator",
+  "files": {
+    "experiment.py": "92ae291369fde245930ba704938db3dc9c8675092033a970a65f0832968c6367",
+    "run_campaign.py": "a22cb6d39edf2cb3e3a6bd3ff5f4c37f2cde1738bc55631f88776cb411867499"
+  },
+  "prior_code": "runtime_archive/",
+  "reserve_gib": 5,
+  "total_rss_limit_gib": 36,
+  "guard_reservation_gib": 8,
+  "uniform_reservation_gib": 10
+}

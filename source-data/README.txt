@@ -1,0 +1,1 @@
+Numerical source tables for the revised manuscript. See ../docs/DATA_DICTIONARY.md and ../docs/FIGURE_MAP.md. The original campaign records are in ../analysis/. Regenerate statistics with ../scripts/build_revision_tables.py; regenerate the molecular one-electron contractions with ../scripts/extract_one_electron_errors.py.

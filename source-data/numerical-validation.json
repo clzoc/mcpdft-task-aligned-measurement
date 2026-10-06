@@ -1,0 +1,9 @@
+{
+  "equilibrium_records": 320,
+  "ci_rows_verified": 120,
+  "matched_observations": "identical for both objective weights",
+  "minimum_dqg_eigenvalue": -3.2997666300504255e-09,
+  "max_equality_residual": 1.8342104570427284e-07,
+  "max_contraction_error": 3.802566869247552e-11,
+  "max_energy_identity_error_mHa": 2.219735506514553e-11
+}

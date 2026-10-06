@@ -1,0 +1,10 @@
+{
+  "max_workers": 4,
+  "threads": 3,
+  "reserve_gib": 5.0,
+  "total_rss_limit_gib": 36.0,
+  "worker_rss_limit_gib": 13.0,
+  "worker_address_space_gib": 20.0,
+  "guard_reservation_gib": 8.0,
+  "uniform_reservation_gib": 10.0
+}

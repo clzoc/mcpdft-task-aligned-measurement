@@ -1,0 +1,9 @@
+{
+  "result_records": 496,
+  "equilibrium_records": 320,
+  "scan_records": 176,
+  "reused_scan_records": 16,
+  "paired_objective_comparisons": 128,
+  "independently_reproduced_rmse_intervals": 120,
+  "independently_reproduced_scan_mean_intervals": 44
+}

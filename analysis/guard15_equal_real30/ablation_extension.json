@@ -1,0 +1,22 @@
+{
+  "time": 1791202332.6402593,
+  "request": "Add guard15 (1,0), exclusive-guard15 (1,2) and (1,0)",
+  "original_arms_retained": [
+    "guard15_equal",
+    "uniform"
+  ],
+  "added_arms": [
+    "guard15_equal_mu0",
+    "exclusive_guard15_mu2",
+    "exclusive_guard15_mu0"
+  ],
+  "expected_results": 320,
+  "exclusive_definition": "Complement of the same guard15 selection within fixed pool30; same 30x500 pilot; retain complement pilot; remaining shots equal on complement15",
+  "same_observations_across_weights": true,
+  "selection_uses_truth": false,
+  "source_sha256": {
+    "experiment.py": "a4e975293312cf675a1ed907a21c0f59d090d03cb283889479f3c298b8ccd9b1",
+    "run_campaign.py": "1efd009d53ffd140dcefe49e10ff9c9d81fc44d2f76196d49ccb0e1caadfe9e4"
+  },
+  "verification": "PASS: both systems and all budgets; complement disjoint union, matched counts, pilot digest and equal plans across mu"
+}

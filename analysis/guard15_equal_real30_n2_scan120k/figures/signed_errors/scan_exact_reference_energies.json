@@ -1,0 +1,60 @@
+{
+  "note": "Exact CAS reference energies; H = Hamiltonian, F = nonlinear ftPBE (MC-PDFT), Eh; same builder chain as the scan campaign (CAS(10e,8o), cc-pVDZ, ftPBE grid_level=1)",
+  "energies": {
+    "0.80": {
+      "bond_angstrom": 0.8,
+      "exact_h_eh": -108.43735470036144,
+      "exact_f_eh": -108.83709455771064
+    },
+    "0.90": {
+      "bond_angstrom": 0.9,
+      "exact_h_eh": -108.82662880621878,
+      "exact_f_eh": -109.22061326792226
+    },
+    "1.00": {
+      "bond_angstrom": 1.0,
+      "exact_h_eh": -108.99032980330063,
+      "exact_f_eh": -109.38042083514844
+    },
+    "1.10": {
+      "bond_angstrom": 1.1,
+      "exact_h_eh": -109.03457202269362,
+      "exact_f_eh": -109.42113609400788
+    },
+    "1.25": {
+      "bond_angstrom": 1.25,
+      "exact_h_eh": -109.00480509950803,
+      "exact_f_eh": -109.3789225514643
+    },
+    "1.45": {
+      "bond_angstrom": 1.45,
+      "exact_h_eh": -108.91801052729025,
+      "exact_f_eh": -109.26756277673584
+    },
+    "1.60": {
+      "bond_angstrom": 1.6,
+      "exact_h_eh": -108.8529852473871,
+      "exact_f_eh": -109.19086227313718
+    },
+    "1.80": {
+      "bond_angstrom": 1.8,
+      "exact_h_eh": -108.78918602199207,
+      "exact_f_eh": -109.1145096023545
+    },
+    "2.00": {
+      "bond_angstrom": 2.0,
+      "exact_h_eh": -108.7569765758,
+      "exact_f_eh": -109.06740938521577
+    },
+    "2.20": {
+      "bond_angstrom": 2.2,
+      "exact_h_eh": -108.74535514556227,
+      "exact_f_eh": -109.04307742565706
+    },
+    "2.50": {
+      "bond_angstrom": 2.5,
+      "exact_h_eh": -108.7405158756832,
+      "exact_f_eh": -109.02820969481775
+    }
+  }
+}

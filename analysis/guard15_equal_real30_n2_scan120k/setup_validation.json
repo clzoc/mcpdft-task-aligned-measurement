@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "total_results": 176,
+  "new_solves": 160,
+  "reuse_results": 16,
+  "pool_matches_primary": true,
+  "seed_convention_matches_primary": true,
+  "anchor_shapes_valid": true,
+  "equilibrium_recomputation_blocked": true,
+  "scheduler_engine_agree": true
+}

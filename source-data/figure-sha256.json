@@ -1,0 +1,9 @@
+{
+  "ablation_60k_energy_error_decomposition.pdf": "4a60d9dba0e1bcf8e9695103b2fd4849b8b7310e5be657a867b7853e1bc48d7d",
+  "co_rmse_errorbars_vertical.pdf": "75b418e868a2438bf86eda2edd0b56a1949743db503664d38f62969fc6ed6ade",
+  "energy_high_budget_detail.pdf": "33ef7fc4e8c6b0abf1e1ed1a646dcbc5cc20fda77bd93c573fe28dd64284af92",
+  "guard15_method_schematic.pdf": "cf24e0bd4c9f9af6a582734bab0808ccb69e2476165ad8f5cf4949bfa92a93a1",
+  "n2_rmse_errorbars_vertical.pdf": "2ec8cc69f7ce1e3f41ad98e973c926c5151c898dcf925c17e1620223caffeba7",
+  "scan_energy_and_signed_error.pdf": "d457c4213b004a97f5e06b997e115d1dd48a223fa281f9ea453ea2f812d4728f",
+  "scan_hamiltonian_energy_and_signed_error.pdf": "6e813b8b47a05ed07a77a86c04448393db82b0f689a0f3dd5708bd76b9807673"
+}

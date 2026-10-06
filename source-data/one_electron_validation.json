@@ -1,0 +1,12 @@
+{
+  "n2": {
+    "max_effective_one_electron_validation_difference_mHa": 3.3232083751499886e-11,
+    "max_gamma_norm_validation_difference": 1.4849232954361469e-15,
+    "reference_casci_energy": -109.03457202269364
+  },
+  "co_eq": {
+    "max_effective_one_electron_validation_difference_mHa": 7.414208136324874e-12,
+    "max_gamma_norm_validation_difference": 7.667477763817487e-16,
+    "reference_casci_energy": -112.80581481794454
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "name": "guard15_equal_real30_n2_scan120k",
+  "bonds_angstrom": [
+    0.8,
+    0.9,
+    1.0,
+    1.1,
+    1.25,
+    1.45,
+    1.6,
+    1.8,
+    2.0,
+    2.2,
+    2.5
+  ],
+  "systems": {
+    "n2_r080": 0.8,
+    "n2_r090": 0.9,
+    "n2_r100": 1.0,
+    "n2_r110": 1.1,
+    "n2_r125": 1.25,
+    "n2_r145": 1.45,
+    "n2_r160": 1.6,
+    "n2_r180": 1.8,
+    "n2_r200": 2.0,
+    "n2_r220": 2.2,
+    "n2_r250": 2.5
+  },
+  "budget": 120000,
+  "streams": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "arms": [
+    "guard15_equal",
+    "uniform"
+  ],
+  "total_results": 176,
+  "new_solves": 160,
+  "reused_results": 16,
+  "chemistry": {
+    "molecule": "N2",
+    "basis": "cc-pvdz",
+    "cas_electrons": 10,
+    "cas_orbitals": 8,
+    "ncore": 2,
+    "builder": "same canonical RHF/CASCI N2 context as primary, existing n2_geometry_context"
+  },
+  "pool": {
+    "kind": "Haar O(8), real, identical alpha/beta rotations",
+    "frames": 30,
+    "seed": 20260716,
+    "digest": "f52d48cb9e04b6923268fa94c527a6fa277e62999849b0d5a064d68e4821fbbb",
+    "fixed_across_systems_streams_budgets": true
+  },
+  "pilot_per_frame": 500,
+  "pilot_shots": 15000,
+  "selection": "guard15 K=15 backward-greedy path in identifiable pool subspace, independently per geometry/stream",
+  "guard": {
+    "lambda_radius": 1.0,
+    "mu_ftpbe": 2.0,
+    "new_shots_per_selected_frame": 7000,
+    "fit_shots_per_selected_frame": 7500,
+    "fit_shots": 112500,
+    "unused_pilot_shots": 7500,
+    "objective": "H + 2*F_lin(geometry DQG anchor) + Tr(E)"
+  },
+  "uniform": {
+    "lambda_radius": 1.0,
+    "mu_ftpbe": 0.0,
+    "pilot_shots": 0,
+    "shots_per_frame": 4000,
+    "fit_shots": 120000,
+    "objective": "original global_band spin H + Tr(E)"
+  },
+  "error_basis": "spin",
+  "full_E": false,
+  "positivity": "DQG",
+  "solver": "MOSEK",
+  "tolerance": 1e-08,
+  "seed_formula": "202610018100 + 104729*(200+stream)",
+  "same_pool_and_seed_per_stream_across_geometries": true,
+  "reuse_equilibrium": {
+    "source": "/home/tsunami/manuscript/analysis/guard15_equal_real30",
+    "source_system": "n2",
+    "target_system": "n2_r110",
+    "rule": "copy original JSON metrics and NPZ arrays; record source hashes; no new solve"
+  },
+  "dependency": {
+    "source_campaign": "/home/tsunami/manuscript/analysis/guard15_equal_real30/campaign_state.json",
+    "required_status": "complete",
+    "required_results": 320,
+    "scan_starts_only_after_primary": true
+  },
+  "reporting": "H/F RMSE and bias in mHa separately; mean and RMS unnormalized Frobenius 2-RDM error; all eight per-stream values",
+  "source_sha256": {
+    "guard15_equal_real30_n2_scan120k/scan.py": "641a7c56f89d12e41125cebe4a9610a38619e014cb684e6bd6c74b2b35ff40cc",
+    "guard15_equal_real30_n2_scan120k/engine.py": "a4e975293312cf675a1ed907a21c0f59d090d03cb283889479f3c298b8ccd9b1",
+    "guard15_equal_real30_n2_scan120k/run_campaign.py": "d072404ac7a1c34dd20df3ac86d345e3d75f58151539163fe2ade21aa7a23fb3",
+    "guard15_equal_real30_n2_scan120k/after_primary.py": "95e45901ae4b8d2be347e323e9c62b85357bca8aa016ac878d2b8e92fc7c33d2"
+  },
+  "anchor_sha256": {
+    "n2_r080": "a023428d018200f971f015b95c190b79a20c0bd1e8d34666a279a26eb24b9eef",
+    "n2_r090": "1c830568f9cac3a965e4b0a24b4b2dec0312f1d81f66d5363bea23f1cbe2d2af",
+    "n2_r100": "d556b82eba09c4f6c9c185877b0e4ec214800a9288ef7e7ca4e1416cd761e411",
+    "n2_r110": "2a3dc2da6bf724e19b7fb0dcddec169dae305b68d32f75df387d302a5f84c726",
+    "n2_r125": "c6f6176ab247997966c1e2460498faae2f100fb72b60601613f7a76b2efdf025",
+    "n2_r145": "f979ca3dbaa08cbbee91141addfb2e1b6a8093bdd1f154fd53d0bd64adabccc3",
+    "n2_r160": "7fe47bd54ace07ec1b93fa04626bd42a21392f2eabfb5291d6925271c452839d",
+    "n2_r180": "fc0643cc03bd213b1d319481a91a006eb506ca6a4e2ef4a6a75c43e0fda40c2e",
+    "n2_r200": "d4717edbb8a21d3c412e3fe4e94f20460dad94f93866c1ca5f0ca88db6addd13",
+    "n2_r220": "323a0fcdeb4f20027baec23f830d105b87557e6766abf44c07ddcabe9c6e02aa",
+    "n2_r250": "42c5ab5490f3216ffe902a805bf4d6de8a2c4e3fb225716f2b874e5daa32db16"
+  }
+}

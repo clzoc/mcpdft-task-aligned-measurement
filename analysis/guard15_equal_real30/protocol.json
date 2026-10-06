@@ -1,0 +1,135 @@
+{
+  "name": "guard15_equal_real30",
+  "budgets": [
+    30000,
+    60000,
+    120000,
+    240000
+  ],
+  "streams": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "arms": [
+    "guard15_equal",
+    "guard15_equal_mu0",
+    "exclusive_guard15_mu2",
+    "exclusive_guard15_mu0",
+    "uniform"
+  ],
+  "systems": {
+    "n2": {
+      "atom": "N 0 0 0; N 0 0 1.10",
+      "bond_angstrom": 1.1,
+      "basis": "cc-pvdz",
+      "cas": [
+        10,
+        8
+      ],
+      "ncore": 2,
+      "context": "original_global_fit/context_108.context"
+    },
+    "co_eq": {
+      "atom": "C 0 0 -0.564; O 0 0 0.564",
+      "bond_angstrom": 1.128,
+      "geometry_source": "NIST ground-state experimental re=1.128323 A, rounded to 1.128 A",
+      "geometry_source_url": "https://webbook.nist.gov/cgi/cbook.cgi?ID=C630080&Mask=1000",
+      "basis": "cc-pvdz",
+      "cas": [
+        10,
+        8
+      ],
+      "ncore": 2,
+      "symmetry": "C2v",
+      "builder": "canonical"
+    }
+  },
+  "pool": {
+    "kind": "Haar O(8), real, identical alpha/beta rotations",
+    "frames": 30,
+    "seed": 20260716,
+    "digest": "f52d48cb9e04b6923268fa94c527a6fa277e62999849b0d5a064d68e4821fbbb",
+    "fixed_across_systems_streams_budgets": true
+  },
+  "pilot_per_frame": 500,
+  "pilot_total": 15000,
+  "selected_frames": 15,
+  "selection": "Existing guard15 backward-greedy path, in identifiable pool row space; K=15",
+  "production_allocation": "(B-15000)/15 new shots on each selected frame",
+  "selected_pilots_reused": true,
+  "unselected_pilots_in_fit": false,
+  "fit_shots": "B-7500",
+  "selection_uses_truth": false,
+  "guard_merit": {
+    "lambda_radius": 1.0,
+    "mu_ftpbe": 2.0,
+    "form": "H + 2 F_lin(anchor) + Tr(E)"
+  },
+  "arm_definitions": {
+    "guard15_equal": {
+      "lambda_radius": 1.0,
+      "mu_ftpbe": 2.0,
+      "frames": "guard15",
+      "pilot_shots": 15000
+    },
+    "guard15_equal_mu0": {
+      "lambda_radius": 1.0,
+      "mu_ftpbe": 0.0,
+      "frames": "guard15",
+      "pilot_shots": 15000
+    },
+    "exclusive_guard15_mu2": {
+      "lambda_radius": 1.0,
+      "mu_ftpbe": 2.0,
+      "frames": "complement of guard15",
+      "pilot_shots": 15000
+    },
+    "exclusive_guard15_mu0": {
+      "lambda_radius": 1.0,
+      "mu_ftpbe": 0.0,
+      "frames": "complement of guard15",
+      "pilot_shots": 15000
+    },
+    "uniform": {
+      "lambda_radius": 1.0,
+      "mu_ftpbe": 0.0,
+      "frames": "all30",
+      "pilot_shots": 0
+    }
+  },
+  "exclusive_rule": "Set complement of the same pilot-selected guard15; no new selection; equal remaining shots on complement15; reuse complement pilots",
+  "baseline": {
+    "rule": "uniform30, no pilot",
+    "shots_per_frame": "B/30",
+    "estimator": "original global_band spin",
+    "lambda_radius": 1.0,
+    "mu_ftpbe": 0.0
+  },
+  "error_basis": "spin",
+  "positivity": "DQG",
+  "full_E": false,
+  "seed_formula": "202610018100 + 104729*(200+stream)",
+  "coupling": "Same per-frame RNG prefixes across arms and budgets; independent shot streams, fixed pool",
+  "evaluation": "H and actual nonlinear FTPBE F versus exact CAS reference; truth used only for simulated acquisition and scoring",
+  "solver": "MOSEK, tolerance 1e-8; no numerical warm-start reuse",
+  "compilation": "One budget and one arm per subprocess; exact raw observations; original first completed results retained, see runtime_amendment.json",
+  "source_sha256": {
+    "guard15_equal_real30/experiment.py": "a4e975293312cf675a1ed907a21c0f59d090d03cb283889479f3c298b8ccd9b1",
+    "guard15_lammu/gl15.py": "4fa09dcf108d426c8fa0ce39962e206fb3a7e213123139c806fb6edaa5bda974",
+    "guard15_lammu/co_weak_parts.py": "47b9d9423a8027d689bc72dbdc42f532662a9a4d8f0bf545bfa0c97f0a3c814b",
+    "guard15_lammu/n2_guard15_pools.py": "a44dd85e2093a5280d46a29e385535e8c22ad092d9169973e886c54a50f795f6",
+    "original_bands/screen_frame_subsets.py": "56760b89e38b0b0ff551b40ccabd072945c18adade4375c1b5133960a0716db4",
+    "original_bands/reusable_band_solver.py": "4f6477e84a416b3a33009053fa7a476236d55b445adfb87f3d1dd37dcac97712",
+    "original_bands/run.py": "1e02b8c0f3b3ba460081a0b0f970e91307b3cc67bb7a80f1fa064725a53ccb2c",
+    "guard15_lammu/merit_solver.py": "9b05c57ac5eb419393a3d129a8994f389b7b736d4bc3ded3df855f2919ef23f3",
+    "original_bands/subset_measurements.py": "3be204f661478d4636666f8de5684a3c1ee1cb2b3bf88dc45f0ebe4e546c7b5e",
+    "mcpdft_measurement_revision/guarded_mcpdft_shadow_protocol/code/vendor/constrained_shadow.py": "6444f53db7ce4a5ec9484c27ae2bbe48e83c31c0256c555bbdbfe7b641272666",
+    "mcpdft_measurement_revision/guarded_mcpdft_shadow_protocol/tools/run_n2_random_pilot_joint_design.py": "abb7b37fb10fe37e8f3844c59964dc7a152dc8cbc08212b36eea9512233b754f"
+  }
+}

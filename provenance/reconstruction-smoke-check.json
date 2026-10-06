@@ -1,0 +1,17 @@
+{
+  "case": "N2 R=1.10 A, CAS(10e,8o), cc-pVDZ; Select15 mu=2; B=30000; stream=0",
+  "status": "optimal",
+  "fresh_pilot_and_selection": true,
+  "observations_indices_counts": "array-identical to archive",
+  "new_minus_archived": {
+    "h_error_meh": 2.3572965801577084e-07,
+    "f_error_meh": 2.2879476091475226e-08,
+    "d2_error": -2.0036554915225935e-09,
+    "gamma_error": 1.8166121731888474e-10
+  },
+  "seconds": 200.78583455085754,
+  "threads": 1,
+  "maximum_dqg_constraint_violation": 1.0271931877078263e-09,
+  "contraction_error": 8.683289072446496e-12,
+  "peak_rss_GiB_reported": 6.2780914306640625
+}
