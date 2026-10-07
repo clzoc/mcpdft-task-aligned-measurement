@@ -1,0 +1,9 @@
+{
+  "rotation_frame": 3,
+  "givens_blocks": 56,
+  "gate_count_with_channels": 202,
+  "basis_state_electrons_per_spin": 5,
+  "sampled_shots": 8,
+  "scale": 0.2,
+  "scope": "Import, circuit construction and sampling smoke check; not a rerun of the chemistry campaign."
+}

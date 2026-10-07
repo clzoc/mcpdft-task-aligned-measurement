@@ -5,5 +5,10 @@
   "scripts/extract_one_electron_errors.py": "Use repository source-data/ and generated/ output directories.",
   "scripts/plot_energy_detail.py": "Read source-data/ from repository root.",
   "analysis/guard15_equal_real30/plot_ablation_energy_decomposition.py": "Correct generated text caption from production shots to total shots; numerical plotting unchanged.",
-  "analysis/guard15_equal_real30/runtime_amendment.json": "Remove conversational provenance from the execution-resource note; retain the numerical and resource settings."
+  "analysis/guard15_equal_real30/runtime_amendment.json": "Remove conversational provenance from the execution-resource note; retain the numerical and resource settings.",
+  "noise-study/": "Self-contained circuit-noise source archive with original numerical arrays and fixed plans; historical path and field identifiers retained.",
+  "noise-study/tools/verify_noise_moments.py": "Direct generated validation output outside the archived study.",
+  "noise-study/plot_scan_energy_signed_error.py": "Direct regenerated figures to generated/figures/noise; clarify scale in generated caption text; plotted values unchanged.",
+  "scripts/verify_noise_data.py": "Port manuscript calibration/record/table verifier to repository paths and generated output.",
+  "scripts/run_noise_reconstruction.py": "Copy sources and frozen plans to a separate run tree, excluding archived noise results; execute original driver without changing numerical kernels."
 }

@@ -6,3 +6,7 @@ The inequality-band DQG reconstruction follows the constrained-shadow formulatio
 
 External dependencies, including PySCF, Qiskit, CVXPY and MOSEK, retain their own licenses and are installed separately. No MOSEK license, API token, third-party paper PDF or reviewer correspondence is included. No new blanket license is assigned by this repository to third-party material or the authors' code and data.
 
+
+## Circuit-noise extension
+
+Circuit simulation uses MindQuantum 0.12.0, installed separately under its upstream license. The supplied Origin Wukong-180-2 calibration workbook was downloaded from the Origin Quantum Cloud platform; its export timestamp and SHA256 are recorded in `noise-study/README.txt`. The workbook retains its original provenance. No new blanket license is assigned to third-party calibration material.

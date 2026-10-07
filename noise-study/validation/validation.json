@@ -1,0 +1,147 @@
+{
+  "records_verified": 352,
+  "histogram_files_verified": 44,
+  "aggregate_groups_verified": 32,
+  "calibration_sha256": "8db26f06cdbab91f880614607741f9752a1093d66e7f895a893f4dc63a909db1",
+  "calibration_source": "Origin Quantum Cloud platform, confirmed by author",
+  "workbook_export_timestamp_utc": "2026-07-16T11:22:01Z",
+  "device_calibration_timestamp": "not recorded in the supplied workbook",
+  "stream": 0,
+  "selection": "fixed archived ideal-measurement pilot plan; no noisy-pilot reselection",
+  "noisy_fit_shots": {
+    "Uniform30": 120000,
+    "Select15": 112500
+  },
+  "nominal_protocol_budget": 120000,
+  "mitigation": "unclipped tensor-product readout inversion followed by signed particle-sector normalization",
+  "stats": {
+    "0.2/uniform/exact": {
+      "h": 0.0002826475364980493,
+      "f": 5.8657398601382754e-05
+    },
+    "0.2/uniform/clean": {
+      "h": 12.227016400835796,
+      "f": 11.32003830444547
+    },
+    "0.2/uniform/raw": {
+      "h": 125.09742753317599,
+      "f": 147.81740332962823
+    },
+    "0.2/uniform/post": {
+      "h": 45.366313414198046,
+      "f": 45.16308304457403
+    },
+    "0.2/uniform/rem": {
+      "h": 210.7436033231406,
+      "f": 242.56947383908422
+    },
+    "0.2/uniform/rem_lin": {
+      "h": 43.404608884059776,
+      "f": 44.49649357986816
+    },
+    "0.2/uniform/rem_post": {
+      "h": 61.02574599656226,
+      "f": 61.979743348942556
+    },
+    "0.2/uniform/rem_lin_post": {
+      "h": 19.923279720571358,
+      "f": 18.41148844119251
+    },
+    "0.2/guard15_equal/exact": {
+      "h": 0.35948976845678215,
+      "f": 0.0704808307750712
+    },
+    "0.2/guard15_equal/clean": {
+      "h": 4.460460786780363,
+      "f": 3.9843061707058833
+    },
+    "0.2/guard15_equal/raw": {
+      "h": 119.11516610995791,
+      "f": 135.21224123546682
+    },
+    "0.2/guard15_equal/post": {
+      "h": 28.018195883830714,
+      "f": 31.637995210539614
+    },
+    "0.2/guard15_equal/rem": {
+      "h": 184.11116203978636,
+      "f": 208.47514788145392
+    },
+    "0.2/guard15_equal/rem_lin": {
+      "h": 26.138527936511824,
+      "f": 30.752178039364708
+    },
+    "0.2/guard15_equal/rem_post": {
+      "h": 29.699319800962435,
+      "f": 35.01833845195072
+    },
+    "0.2/guard15_equal/rem_lin_post": {
+      "h": 9.897757908410071,
+      "f": 8.710085645672647
+    },
+    "1.0/uniform/exact": {
+      "h": 0.0002804921111869046,
+      "f": 5.854737074170691e-05
+    },
+    "1.0/uniform/clean": {
+      "h": 12.227016103111952,
+      "f": 11.320038143915625
+    },
+    "1.0/uniform/raw": {
+      "h": 228.50731278257558,
+      "f": 257.2037172663427
+    },
+    "1.0/uniform/post": {
+      "h": 143.40203857839194,
+      "f": 137.11916607812395
+    },
+    "1.0/uniform/rem": {
+      "h": 320.86597972269993,
+      "f": 358.1229727192473
+    },
+    "1.0/uniform/rem_lin": {
+      "h": 180.92553473741393,
+      "f": 188.27483662834277
+    },
+    "1.0/uniform/rem_post": {
+      "h": 181.8612606379221,
+      "f": 174.82558472077
+    },
+    "1.0/uniform/rem_lin_post": {
+      "h": 72.7119381230651,
+      "f": 64.0541535058831
+    },
+    "1.0/guard15_equal/exact": {
+      "h": 0.3595108742559127,
+      "f": 0.07048493623748178
+    },
+    "1.0/guard15_equal/clean": {
+      "h": 4.460460813618328,
+      "f": 3.9843061787563334
+    },
+    "1.0/guard15_equal/raw": {
+      "h": 211.02141275742372,
+      "f": 229.40979861285135
+    },
+    "1.0/guard15_equal/post": {
+      "h": 111.69301982240081,
+      "f": 115.25104578530505
+    },
+    "1.0/guard15_equal/rem": {
+      "h": 291.7863320627348,
+      "f": 317.5269710519529
+    },
+    "1.0/guard15_equal/rem_lin": {
+      "h": 144.83011315135667,
+      "f": 156.37028610592927
+    },
+    "1.0/guard15_equal/rem_post": {
+      "h": 121.8887793412802,
+      "f": 126.59186985595858
+    },
+    "1.0/guard15_equal/rem_lin_post": {
+      "h": 50.65529679672899,
+      "f": 50.27189257245808
+    }
+  }
+}

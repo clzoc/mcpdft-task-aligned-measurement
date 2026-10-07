@@ -1,0 +1,9 @@
+{
+  "frame_variant_blocks_checked": 176,
+  "max_absolute_moment_difference": 7.771561172376096e-16,
+  "sector_mass_range": [
+    0.5297037446292221,
+    0.9071892321686039
+  ],
+  "implementation": "Independent pairwise channel inverse; all scales, geometries and arms, first sampled frame."
+}

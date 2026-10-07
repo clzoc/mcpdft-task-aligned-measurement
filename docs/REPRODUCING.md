@@ -97,9 +97,27 @@ These commands rebuild the CASSCF reference and rerun the nonlinear search. They
 
 The full-pool exact-mean checks used in SI Section S4 are retained with `analysis/guard15_real30_dqg_lineality/noiseless_reference.py` and their JSON/NPZ records. The historical directory name does not imply a lineality-based selection rule in the released method. The driver skips existing records; in a separate clone, move the chosen archived result pair aside before rerunning it with `--system n2` or `--system co_eq`.
 
-The schematic is assembled by `analysis/method_schematic/make_schematic.py` from supplied panel images and vector elements. `make_panel_d.py` can regenerate its measured-data panel. The schematic source keeps the original graphical design; the manuscript caption and data dictionary define its relative RDM norm, total-energy tangent and illustrative geometry.
+The historical four-panel schematic is assembled by `analysis/method_schematic/make_schematic.py` from supplied panel images and vector elements. `make_panel_d.py` can regenerate its measured-data panel. The schematic source keeps the original graphical design; the manuscript caption and data dictionary define its relative RDM norm, total-energy tangent and illustrative geometry.
+
+## 6. Circuit-noise verification and reproduction
+
+The README verification commands use archived outputs without a solver license. `verify_noise_data.py` independently checks workbook calibration values, shot accounting, selected plans and all aggregate RMSEs; it also emits three SI tables under `generated/noise-tables/`. `verify_noise_moments.py` independently reconstructs raw, ideal, linear-corrected and signed-sector-conditioned pair moments for the first frame of every histogram file. The four regenerated noise plots go to `generated/figures/noise/`. Archived files remain unchanged by these commands.
+
+For fresh sampling and fitting, install the full environment plus MindQuantum:
+
+```bash
+python -m pip install -r requirements-noise.txt
+python scripts/run_noise_reconstruction.py sample --tag n2_r080 --gate-scale 0.2
+python scripts/run_noise_reconstruction.py solve --tag n2_r080 --gate-scale 0.2
+```
+
+The wrapper copies the computational sources and fixed plans to `runs/noise-reproduction/code/`, excluding archived noise histograms and fits. Subsequent calls reuse this working tree. `sample` generates both ideal and noisy histograms; `solve` performs eight processing/reconstruction variants for each of the two arms and needs a MOSEK license. The original driver uses three computational threads and a 20-GiB address-space limit during fitting. Use the eleven geometry tags listed above and gate scales 0.2 and 1.0 for the full campaign. A new `--output` directory gives an independent output tree. The archived plans remain fixed; these commands do not rerun selection with noisy pilot data.
+
+The effective depolarizing channels follow complete Givens blocks, not individual gates of the illustrated decomposition. Each participant receives an independent one-qubit depolarizing channel. Only these gate parameters are scaled; independent symmetric readout bit flips remain fixed. The full model and calibration provenance are in `noise-study/README.txt` and `noise-study/circuits/calibration/`.
+
+Historical `g0.2`/`g1.0` filenames and `gate_scale` keys are retained to preserve source traceability; they denote the dimensionless scale. In early full-scale JSON records a missing `gate_scale` means 1.0. The `acceptance_post` field in `rem_lin_post` originates from a different clipped processing path and is not the signed-sector normalization used by the reported estimator.
 
 ## Reproducibility levels
 
-Archived numeric records and hashes reproduce the reported statistics exactly. Fresh chemistry and conic optimization can show small version-, platform- or tolerance-dependent differences; compare solver status, equality/PSD residuals and energy errors as well as random seeds. The archived calculations retain their original source hashes, and `provenance/portability-changes.json` identifies packaging changes. The release does not contain hardware data or gate/readout-noise benchmarks.
+Archived numeric records and hashes reproduce the reported statistics exactly. Fresh chemistry and conic optimization can show small version-, platform- or tolerance-dependent differences; compare solver status, equality/PSD residuals and energy errors as well as random seeds. The archived calculations retain their original source hashes, and `provenance/portability-changes.json` identifies packaging changes. The circuit-noise extension contains simulated gate/readout-noise benchmarks; it does not contain new quantum-device executions.
 
